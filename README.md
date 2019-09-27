@@ -1,14 +1,15 @@
-# Advanced Open File
+# Atom File Jumper
 
 [![TravisCI Build Status](https://travis-ci.org/Osmose/advanced-open-file.svg)](https://travis-ci.org/Osmose/advanced-open-file)
 
-Advanced Open File is a package for helping Atom users to open files and folders
+File Jumper is a package for helping Atom users to open files and folders
 easily. It can also create new files and folders if they don't exist.
 
 ![Screenshot of plugin](http://osmose.github.io/advanced-open-file/screenshot.png)
 
-Advanced Open File is fork of
-[Advanced New File](https://github.com/Trudko/advanced-new-file), itself a fork
+File Jumper is fork of
+[Advanced Open File](https://github.com/Osmose/advanced-open-file), itself a fork
+of [Advanced New File](https://github.com/Trudko/advanced-new-file), itself a fork
 of [Fancy New File](https://github.com/rev087/fancy-new-file). Thanks to both
 rev087 and Trudko for their work.
 
@@ -47,7 +48,7 @@ Available commands for binding:
 
 <dl>
   <dt><code>advanced-open-file:toggle</code></dt>
-  <dd>Toggles the Advanced Open File dialog.</dd>
+  <dd>Toggles the File Jumper dialog.</dd>
 
   <dt><code>core:confirm</code></dt>
   <dd>
@@ -62,7 +63,7 @@ Available commands for binding:
   </dd>
 
   <dt><code>core:cancel</code></dt>
-  <dd>Close the Advanced Open File dialog.</dd>
+  <dd>Close the File Jumper dialog.</dd>
 
   <dt>
     <code>pane:split-left</code>, <code>pane:split-right</code>,
@@ -114,9 +115,9 @@ The following extra keybindings are included by default:
 
 Action                                     | Extra Keys
 ------------------------------------------ | ------------------
-`advanced-open-file:move-cursor-up`        | `Ctrl-p`, `Ctrl-i`
-`advanced-open-file:move-cursor-down`      | `Ctrl-n`, `Ctrl-k`
-`advanced-open-file:delete-path-component` | `Ctrl-l`
+`file-jumper:move-cursor-up`        | `Ctrl-p`, `Ctrl-i`
+`file-jumper:move-cursor-down`      | `Ctrl-n`, `Ctrl-k`
+`file-jumper:delete-path-component` | `Ctrl-l`
 
 You can of course remap the keys however you wish. For example, add the
 following to your keymap to map `Ctrl-x Ctrl-f` to toggle the dialog and
@@ -124,10 +125,10 @@ following to your keymap to map `Ctrl-x Ctrl-f` to toggle the dialog and
 
 ```cson
 'atom-workspace':
-  'ctrl-x ctrl-f': 'advanced-open-file:toggle'
+  'ctrl-x ctrl-f': 'file-jumper:toggle'
 
-'.advanced-open-file atom-text-editor':
-  'ctrl-j': 'advanced-open-file:move-cursor-down'
+'.file-jumper atom-text-editor':
+  'ctrl-j': 'file-jumper:move-cursor-down'
 ```
 
 ## Settings
@@ -195,14 +196,14 @@ following to your keymap to map `Ctrl-x Ctrl-f` to toggle the dialog and
 ## Event Service
 
 Other packages can subscribe to events to get notified when certain actions
-happen in advanced-open-file. To do so, you'll need to consume the
-`advanced-open-file-events` service:
+happen in file-jumper. To do so, you'll need to consume the
+`file-jumper-events` service:
 
 ### `package.json`
 
 ```json
 "consumedServices": {
-  "advanced-open-file-events": {
+  "file-jumper-events": {
     "versions": {
       "0.1.0": "consumeEventService"
     }
@@ -231,7 +232,7 @@ module.exports =
 
 ### `onDidOpenPath`
 
-Triggered when a file is opened via advanced-open-file.
+Triggered when a file is opened via file-jumper.
 
 ```coffeescript
 service.onDidOpenPath (path) ->
@@ -240,7 +241,7 @@ service.onDidOpenPath (path) ->
 
 ### `onDidCreatePath`
 
-Triggered when a file is created via advanced-open-file. Note that this is only
+Triggered when a file is created via file-jumper. Note that this is only
 triggered when the "Create files instantly" preference is enabled. It does not
 trigger when the preference is disabled and a new file is opened and then
 subsequently saved.
@@ -260,22 +261,22 @@ or the new feature you want added. If you're interested in implementing the fix
 for your request yourself, or fixing an issue submitted by someone else, read
 on.
 
-[file an issue]: https://github.com/Osmose/advanced-open-file/issues/new
+[file an issue]: https://github.com/Osmose/file-jumper/issues/new
 
 ### Developer Setup
 
 Setting up a development install is easy with [apm][]:
 
 ```sh
-$ apm develop advanced-open-file /path/to/checkout
+$ apm develop file-jumper /path/to/checkout
 ```
 
-The command above will use Git to clone Advanced Open File to the
+The command above will use Git to clone File Jumper to the
 `/path/to/checkout` directory, download the dependencies, and create a symlink
 in your `.atom` profile for the package.
 
 Now, if you launch Atom with the `-d` flag, Atom will load the development
-checkout of Advanced Open File (instead of the released version, if you have it
+checkout of File Jumper (instead of the released version, if you have it
 installed). Any changes you make to the code will be reflected if you use the
 `Window: Reload` command in the [Command Palette][] to reload the editor.
 
