@@ -1,0 +1,38 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'.platform-darwin atom-workspace':
+  'alt-cmd-o': 'file-jumper:toggle'
+
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
+  'ctrl-alt-o': 'file-jumper:toggle'
+
+'.file-jumper atom-text-editor':
+  'tab': 'file-jumper:autocomplete'
+  'up': 'file-jumper:move-cursor-up'
+  'down': 'file-jumper:move-cursor-down'
+  'pageup': 'file-jumper:move-cursor-top'
+  'pagedown': 'file-jumper:move-cursor-bottom'
+
+  # Emacs-style movement
+  'ctrl-p': 'file-jumper:move-cursor-up'
+  'ctrl-n': 'file-jumper:move-cursor-down'
+
+  # Alternative movement keys
+  'ctrl-i': 'file-jumper:move-cursor-up'
+  'ctrl-k': 'file-jumper:move-cursor-down'
+
+  # A more powerful version of alt-backspace
+  'ctrl-l': 'file-jumper:delete-path-component'
+
+'.platform-darwin .file-jumper atom-text-editor':
+  'cmd-z': 'file-jumper:undo'
+
+'.platform-win32 .file-jumper atom-text-editor, .platform-linux .file-jumper atom-text-editor':
+  'ctrl-z': 'file-jumper:undo'

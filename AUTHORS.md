@@ -5,9 +5,11 @@
   [advanced-new-file](https://github.com/Trudko/advanced-new-file).
 - [Osmose](https://github.com/Osmose/), author of the advanced-new-file fork
   [advanced-open-file](https://github.com/Osmose/advanced-open-file).
+- [ameernuri](https://github.com/ameernuri/), author of the file-jumper fork
+  [file-jumper](https://github.com/ameernuri/file-jumper).
 
 # Current Maintainers
-- [Osmose](https://github.com/Osmose/)
+- [ameernuri](https://github.com/ameernuri/)
 
 # Contributors
 - [JesseLeite](https://github.com/JesseLeite)

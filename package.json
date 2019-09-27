@@ -1,14 +1,14 @@
 {
-  "name": "advanced-open-file",
+  "name": "file-jumper",
   "version": "0.16.8",
-  "main": "./lib/advanced-open-file",
+  "main": "./lib/file-jumper",
   "description": "Open and create files and directories easily. Type in a path (with autocomplete) and view directory contents.",
   "scripts": {
     "shell": "babel-node -r 0"
   },
   "activationCommands": {
     "atom-workspace": [
-      "advanced-open-file:toggle"
+      "file-jumper:toggle"
     ]
   },
   "consumedServices": {
@@ -19,8 +19,8 @@
     }
   },
   "providedServices": {
-    "advanced-open-file-events": {
-      "description": "Listen to events triggered when users open or create paths using advanced-open-file.",
+    "file-jumper-events": {
+      "description": "Listen to events triggered when users open or create paths using file-jumper.",
       "versions": {
         "0.1.0": "provideEventService"
       }
@@ -33,7 +33,7 @@
     "create",
     "new"
   ],
-  "repository": "https://github.com/Osmose/advanced-open-file",
+  "repository": "https://github.com/ameernuri/file-jumper",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.8"

@@ -1,6 +1,6 @@
 # Atom File Jumper
 
-[![TravisCI Build Status](https://travis-ci.org/Osmose/advanced-open-file.svg)](https://travis-ci.org/Osmose/advanced-open-file)
+[![TravisCI Build Status](https://travis-ci.org/ameernuri/file-jumper.svg)](https://travis-ci.org/file-jumper)
 
 File Jumper is a package for helping Atom users to open files and folders
 easily. It can also create new files and folders if they don't exist.
@@ -10,8 +10,8 @@ easily. It can also create new files and folders if they don't exist.
 File Jumper is fork of
 [Advanced Open File](https://github.com/Osmose/advanced-open-file), itself a fork
 of [Advanced New File](https://github.com/Trudko/advanced-new-file), itself a fork
-of [Fancy New File](https://github.com/rev087/fancy-new-file). Thanks to both
-rev087 and Trudko for their work.
+of [Fancy New File](https://github.com/rev087/fancy-new-file). Thanks to
+rev087, Trudko, and Osmose for their work.
 
 ## Usage
 
@@ -47,7 +47,7 @@ to open the selected path in a new split pane in the desired direction.
 Available commands for binding:
 
 <dl>
-  <dt><code>advanced-open-file:toggle</code></dt>
+  <dt><code>file-jumper:toggle</code></dt>
   <dd>Toggles the File Jumper dialog.</dd>
 
   <dt><code>core:confirm</code></dt>
@@ -56,7 +56,7 @@ Available commands for binding:
     selected, open the current path in the input.
   </dd>
 
-  <dt><code>advanced-open-file:confirm-selected-or-first</code></dt>
+  <dt><code>file-jumper:confirm-selected-or-first</code></dt>
   <dd>
     Similar to <code>core:confirm</code>. If nothing is selected, select the
     first item in the list.
@@ -80,31 +80,31 @@ Available commands for binding:
     path is a folder, add that path as a project directory.
   </dd>
 
-  <dt><code>advanced-open-file:autocomplete</code></dt>
+  <dt><code>file-jumper:autocomplete</code></dt>
   <dd>Attempts to autocomplete the current input.</dd>
 
-  <dt><code>advanced-open-file:undo</code></dt>
+  <dt><code>file-jumper:undo</code></dt>
   <dd>Undo changes to the current path.</dd>
 
-  <dt><code>advanced-open-file:move-cursor-up</code></dt>
+  <dt><code>file-jumper:move-cursor-up</code></dt>
   <dd>Move the cursor/highlight for the currently selected file up.</dd>
 
-  <dt><code>advanced-open-file:move-cursor-down</code></dt>
+  <dt><code>file-jumper:move-cursor-down</code></dt>
   <dd>Move the cursor/highlight for the currently selected file down.</dd>
 
-  <dt><code>advanced-open-file:move-cursor-top</code></dt>
+  <dt><code>file-jumper:move-cursor-top</code></dt>
   <dd>
     Move the cursor/highlight for the currently selected file to the top of the
     list.
   </dd>
 
-  <dt><code>advanced-open-file:move-cursor-bottom</code></dt>
+  <dt><code>file-jumper:move-cursor-bottom</code></dt>
   <dd>
     Move the cursor/highlight for the currently selected file to the bottom of
     the list.
   </dd>
 
-  <dt><code>advanced-open-file:delete-path-component</code></dt>
+  <dt><code>file-jumper:delete-path-component</code></dt>
   <dd>
     A more powerful version of <code>alt-backspace</code> that erases the a
     directory component in the miniEditor including the slash ('/').
